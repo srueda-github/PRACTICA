@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>EPS Curitas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/fotos-premium/mujer-cita-doctor_168410-599.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 10%;
+        }
+
+        .option {
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        .login-container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            max-width: 800px;
+            display: flex; 
+            justify-content: space-between; 
+            flex-wrap: wrap; 
+        }
+
+        .login-title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .login-form {
+            width: 45%; 
+        }
+
+        .login-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"],
+        .login-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .login-form input[type="submit"] {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            width: 100%;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EPS Curitas</h1>
+        <div class="options">
+            <div class="option">
+                <h3>Inicio</h3>
+                <p>Descripción de la sección de inicio.</p>
+            </div>
+            <div class="option">
+                <h3>Red de Atención</h3>
+                <p>Descripción de la red de atención médica.</p>
+            </div>
+            <div class="option">
+                <h3>Contáctanos</h3>
+                <p>Información de contacto.</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="login-container">
+        <div class="login-form">
+            <h2 class="login-title">Iniciar Sesión</h2>
+            <form action="autenticacion.jsp" method="post">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <input type="submit" value="Iniciar Sesión" class="btn btn-primary">
+            </form>
+        </div>
+
+        <div class="login-form">
+            <h2 class="login-title">Registrar Nuevo Usuario</h2>
+            <form action="registrar_usuario.jsp" method="post">
+                <label for="new_username">Nuevo Usuario:</label>
+                <input type="text" id="new_username" name="new_username" required>
+                
+                <label for="new_password">Nueva Contraseña:</label>
+                <input type="password" id="new_password" name="new_password" required>
+                
+                <label for="user_type">Tipo de Usuario:</label>
+                <select id="user_type" name="user_type" required>
+                    <option value="">Elige</option>
+                    <option value="usuario">Usuario</option>
+                    <option value="administrador">Administrador</option>
+                </select>
+                
+                <input type="submit" value="Registrar Usuario" class="btn btn-success">
+            </form>
+        </div>
+    </div>
+
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
